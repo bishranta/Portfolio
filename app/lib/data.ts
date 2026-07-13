@@ -8,6 +8,8 @@ export const profile = {
   githubHandle: "github.com/bishranta",
   linkedin: "https://linkedin.com/in/bishrantaregmi",
   linkedinHandle: "linkedin.com/in/bishrantaregmi",
+  instagram: "https://www.instagram.com/bishranta_/",
+  instagramHandle: "instagram.com/bishranta_",
 };
 
 export const skillGroups = [

@@ -22,16 +22,14 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: oklch(0.19 0.012 55);
-    --paper-dim: oklch(0.23 0.014 55);
-    --ink: oklch(0.95 0.008 65);
-    --ink-dim: oklch(0.72 0.016 60);
-    --accent: oklch(0.72 0.15 40);
-    --accent-ink: oklch(0.16 0.012 55);
-    --line: oklch(0.32 0.014 55);
-  }
+:root[data-theme="dark"] {
+  --paper: oklch(0.19 0.012 55);
+  --paper-dim: oklch(0.23 0.014 55);
+  --ink: oklch(0.95 0.008 65);
+  --ink-dim: oklch(0.72 0.016 60);
+  --accent: oklch(0.72 0.15 40);
+  --accent-ink: oklch(0.16 0.012 55);
+  --line: oklch(0.32 0.014 55);
 }
 
 * {
@@ -59,6 +57,7 @@ html {
 body {
   background: var(--paper);
   color: var(--ink);
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 ::selection {

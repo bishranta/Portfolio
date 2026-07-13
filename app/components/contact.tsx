@@ -6,6 +6,7 @@ import {
   Check,
   Copy,
   GithubLogo,
+  InstagramLogo,
   LinkedinLogo,
   MapPin,
 } from "@phosphor-icons/react";
@@ -64,6 +65,15 @@ export function Contact() {
           >
             <LinkedinLogo size={18} />
             LinkedIn
+          </a>
+          <a
+            href={profile.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm font-medium text-ink transition-transform active:scale-[0.97] hover:-translate-y-0.5"
+          >
+            <InstagramLogo size={18} />
+            Instagram
           </a>
         </div>
         <p className="mt-8 inline-flex items-center gap-1.5 text-sm text-ink-dim">

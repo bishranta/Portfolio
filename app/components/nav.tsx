@@ -1,3 +1,5 @@
+import { ThemeToggle } from "./theme-toggle";
+
 const links = [
   { href: "#work", label: "Work" },
   { href: "#about", label: "About" },
@@ -30,6 +32,7 @@ export function Nav() {
           >
             Say hello
           </a>
+          <ThemeToggle />
         </nav>
       </div>
     </header>
