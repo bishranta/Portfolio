@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bishranta Regmi, Full Stack Developer & AI/ML Engineer",
+  title: "Bishranta Regmi | Full Stack Developer & AI/ML Engineer",
   description:
     "Portfolio of Bishranta Regmi, a full stack web developer and AI/ML engineer in Kathmandu, Nepal building React, Next.js, and Python powered products.",
 };

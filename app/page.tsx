@@ -5,6 +5,7 @@ import { Experience } from "@/app/components/experience";
 import { Projects } from "@/app/components/projects";
 import { Contact } from "@/app/components/contact";
 import { Footer } from "@/app/components/footer";
+import { ScrollToTop } from "@/app/components/scroll-to-top";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
