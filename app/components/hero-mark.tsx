@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "motion/react";
 import { Code, PenNib } from "@phosphor-icons/react";
 
@@ -62,35 +63,24 @@ export function HeroMark() {
           transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
           style={{ transformOrigin: "200px 200px" }}
         />
-        <motion.rect
-          x="145"
-          y="145"
-          width="110"
-          height="110"
-          rx="26"
-          fill="var(--paper)"
-          stroke="var(--ink)"
-          strokeWidth="2.5"
-          animate={
-            reduce
-              ? undefined
-              : { rotate: [0, 6, -4, 0], scale: [1, 1.03, 0.98, 1] }
-          }
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          style={{ transformOrigin: "200px 200px" }}
-        />
-        <text
-          x="200"
-          y="212"
-          textAnchor="middle"
-          fontFamily="var(--font-geist-mono)"
-          fontSize="40"
-          fill="var(--ink)"
-          fontWeight={700}
-        >
-          BR
-        </text>
       </motion.svg>
+
+      <motion.div
+        initial={reduce ? false : { opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        className="absolute left-[16%] right-[17%] top-[4%] overflow-hidden rounded-[2rem]"
+        style={{ aspectRatio: "500 / 669" }}
+      >
+        <Image
+          src="/portrait-cutout.png"
+          alt="Illustrated portrait of Bishranta Regmi"
+          fill
+          sizes="(min-width: 768px) 260px, 55vw"
+          className="object-contain"
+          priority
+        />
+      </motion.div>
 
       <motion.div
         className="absolute right-2 top-6 grid size-12 place-items-center rounded-2xl border border-line bg-paper shadow-sm"

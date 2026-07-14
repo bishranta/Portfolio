@@ -138,7 +138,7 @@ export function Projects() {
         onClick={(e) => {
           if (e.target === dialogRef.current) dialogRef.current?.close();
         }}
-        className="m-auto max-h-[85vh] w-full max-w-2xl overflow-y-auto rounded-xl border border-line bg-paper p-0 text-ink backdrop:bg-ink/40 backdrop:backdrop-blur-sm"
+        className="m-auto max-h-[85vh] w-[calc(100%-2rem)] max-w-2xl overflow-y-auto rounded-xl border border-line bg-paper p-0 text-ink backdrop:bg-ink/40 backdrop:backdrop-blur-sm"
       >
         {selected && (
           <div>

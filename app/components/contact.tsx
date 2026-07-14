@@ -89,7 +89,7 @@ export function Contact() {
                   {...(link.href
                     ? { href: link.href, target: "_blank", rel: "noopener noreferrer" }
                     : { onClick: link.onClick })}
-                  className={`flex w-full flex-col items-start gap-4 rounded-2xl p-5 text-left transition-transform hover:-translate-y-1 active:scale-[0.97] ${link.bg}`}
+                  className={`flex w-full flex-col items-center gap-4 rounded-2xl p-5 text-center transition-transform hover:-translate-y-1 active:scale-[0.97] ${link.bg}`}
                 >
                   <span className="grid size-14 place-items-center rounded-2xl bg-white shadow-sm">
                     {link.key === "email" && copied ? (
@@ -124,7 +124,7 @@ export function ResumeLink() {
       rel="noopener noreferrer"
       className="inline-flex items-center gap-1.5 text-sm text-ink-dim transition-colors hover:text-ink"
     >
-      Resume
+      Download CV
       <ArrowUpRight size={14} />
     </a>
   );

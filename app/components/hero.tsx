@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "motion/react";
-import { ArrowUpRight, MapPin } from "@phosphor-icons/react";
+import { ArrowUpRight, CheckCircle, DownloadSimple } from "@phosphor-icons/react";
 import { HeroMark } from "./hero-mark";
 import { Magnetic } from "./magnetic";
 
@@ -24,31 +24,34 @@ export function Hero() {
       />
 
       <div>
-        <motion.div
-          initial={initial}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-line bg-paper-dim px-3.5 py-1.5"
-        >
-          {/* <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-teal opacity-60" />
-            <span className="relative inline-flex size-2 rounded-full bg-teal" />
-          </span> */}
-          <span className="inline-flex items-center gap-1 text-sm text-ink-dim">
-            <MapPin size={14} />
-            Open to work, Kathmandu
-          </span>
-        </motion.div>
-
         <motion.h1
           initial={initial}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-5 text-5xl font-bold tracking-tight text-balance md:text-7xl"
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-5xl font-bold tracking-tight text-balance text-ink md:text-7xl"
         >
-          <span className="block text-ink">developer</span>
-          <span className="block text-coral">&lt;designer&gt;</span>
+          Bishranta Regmi
         </motion.h1>
+        <motion.div
+          initial={initial}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-4 flex flex-wrap items-center gap-4"
+        >
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-line bg-teal/10 px-3.5 py-1.5 text-sm font-medium text-ink">
+            <CheckCircle size={16} weight="fill" className="text-teal" />
+            Open to work
+          </span>
+          <a
+            href="/Bishranta_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-ink underline underline-offset-4 transition-colors hover:text-ink-dim"
+          >
+            <DownloadSimple size={15} weight="bold" />
+            Download CV
+          </a>
+        </motion.div>
         <motion.p
           initial={initial}
           animate={{ opacity: 1, y: 0 }}
