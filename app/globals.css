@@ -8,6 +8,13 @@
   --accent: oklch(0.62 0.16 35);
   --accent-ink: oklch(0.99 0.006 65);
   --line: oklch(0.87 0.01 60);
+
+  --teal: oklch(0.7 0.15 195);
+  --teal-ink: oklch(0.99 0.006 65);
+  --coral: oklch(0.64 0.22 25);
+  --coral-ink: oklch(0.99 0.006 65);
+  --mustard: oklch(0.76 0.17 85);
+  --mustard-ink: oklch(0.2 0.014 55);
 }
 
 @theme inline {
@@ -18,6 +25,12 @@
   --color-accent: var(--accent);
   --color-accent-ink: var(--accent-ink);
   --color-line: var(--line);
+  --color-teal: var(--teal);
+  --color-teal-ink: var(--teal-ink);
+  --color-coral: var(--coral);
+  --color-coral-ink: var(--coral-ink);
+  --color-mustard: var(--mustard);
+  --color-mustard-ink: var(--mustard-ink);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -30,6 +43,13 @@
   --accent: oklch(0.72 0.15 40);
   --accent-ink: oklch(0.16 0.012 55);
   --line: oklch(0.32 0.014 55);
+
+  --teal: oklch(0.74 0.16 195);
+  --teal-ink: oklch(0.16 0.012 55);
+  --coral: oklch(0.68 0.22 25);
+  --coral-ink: oklch(0.16 0.012 55);
+  --mustard: oklch(0.78 0.18 85);
+  --mustard-ink: oklch(0.16 0.012 55);
 }
 
 * {
@@ -38,6 +58,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 4.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
