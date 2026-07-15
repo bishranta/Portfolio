@@ -69,7 +69,7 @@ export function HeroMark() {
         initial={reduce ? false : { opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute left-[16%] right-[17%] top-[4%] overflow-hidden rounded-[2rem]"
+        className="absolute left-[13%] right-[12%] top-[0%] overflow-hidden rounded-[2rem]"
         style={{ aspectRatio: "500 / 669" }}
       >
         <Image
