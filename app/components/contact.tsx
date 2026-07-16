@@ -56,7 +56,8 @@ export function Contact() {
         aria-hidden
         className="pointer-events-none absolute right-0 bottom-0 -z-10 size-[360px] rounded-full bg-mustard/10 blur-3xl"
       />
-      <Reveal>
+      <Reveal className="flex flex-col items-center text-center">
+        <span className="mb-4 block h-1.5 w-9 rounded-full bg-mustard" />
         <h2 className="max-w-[24ch] text-3xl font-semibold tracking-tight md:text-4xl">
           Get in touch.
         </h2>

@@ -36,13 +36,14 @@ export function Experience() {
 
   return (
     <section id="work" className="mx-auto max-w-6xl px-6 py-16">
-      <Reveal>
+      <Reveal className="flex flex-col items-center text-center">
+        <span className="mb-4 block h-1.5 w-9 rounded-full bg-teal" />
         <h2 className="max-w-[32ch] text-3xl font-semibold tracking-tight text-balance md:max-w-none md:text-4xl">
-          Where I have been putting the work in.
+          Work Experience
         </h2>
       </Reveal>
 
-      <div className="relative mt-10">
+      <div className="relative mx-auto mt-10 max-w-4xl">
         <div className="absolute left-[21px] top-6 bottom-6 w-px bg-line" />
 
         <RevealStagger className="space-y-3">

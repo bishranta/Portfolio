@@ -1,25 +1,22 @@
-import { Backpack, BookOpenText, CaretUp, GraduationCap } from "@phosphor-icons/react/dist/ssr";
+import { Backpack, BookOpenText, GraduationCap } from "@phosphor-icons/react/dist/ssr";
 import { Reveal, RevealItem, RevealStagger } from "./reveal";
 import { educationTimeline, certifications } from "@/app/lib/data";
 
 const levelStyle = [
   {
     Icon: GraduationCap,
-    bg: "bg-mustard/20",
     fg: "text-mustard",
     ring: "border-mustard/40",
     hoverRing: "hover:border-mustard/70",
   },
   {
     Icon: BookOpenText,
-    bg: "bg-teal/20",
     fg: "text-teal",
     ring: "border-teal/40",
     hoverRing: "hover:border-teal/70",
   },
   {
     Icon: Backpack,
-    bg: "bg-coral/20",
     fg: "text-coral",
     ring: "border-coral/40",
     hoverRing: "hover:border-coral/70",
@@ -29,27 +26,33 @@ const levelStyle = [
 export function Education() {
   return (
     <section id="education" className="mx-auto max-w-6xl px-6 py-16">
-      <Reveal>
+      <Reveal className="flex flex-col items-center text-center">
+        <span className="mb-4 block h-1.5 w-9 rounded-full bg-coral" />
         <h2 className="max-w-[24ch] text-3xl font-semibold tracking-tight md:text-4xl">
-          The classrooms that got me here.
+          Education & Certifications
         </h2>
       </Reveal>
 
-      <RevealStagger className="mx-auto mt-14 flex max-w-2xl flex-col items-center">
-        {educationTimeline.map((entry, i) => {
-          const style = levelStyle[i % levelStyle.length];
-          const Icon = style.Icon;
-          return (
-            <div key={entry.org} className="flex w-full flex-col items-center">
-              <RevealItem
-                className={`flex w-full items-start gap-4 rounded-2xl border ${style.ring} bg-paper-dim p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${style.hoverRing}`}
-              >
-                <span
-                  className={`grid size-11 shrink-0 place-items-center rounded-full ${style.bg}`}
+      <div className="relative mx-auto mt-10 max-w-4xl">
+        <div className="absolute left-[21px] top-6 bottom-6 w-px bg-line" />
+
+        <RevealStagger className="space-y-3">
+          {educationTimeline.map((entry, i) => {
+            const style = levelStyle[i % levelStyle.length];
+            const Icon = style.Icon;
+            return (
+              <RevealItem key={entry.org} className="flex gap-4">
+                <div className="flex w-11 shrink-0 justify-center pt-3">
+                  <span
+                    className={`relative z-10 grid size-11 shrink-0 place-items-center rounded-full border-2 bg-white shadow-sm ${style.ring}`}
+                  >
+                    <Icon size={20} weight="bold" className={style.fg} />
+                  </span>
+                </div>
+
+                <div
+                  className={`min-w-0 flex-1 rounded-2xl border border-line bg-paper-dim p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-md ${style.hoverRing}`}
                 >
-                  <Icon size={20} weight="bold" className={style.fg} />
-                </span>
-                <div className="min-w-0">
                   <p
                     className={`font-mono text-xs font-semibold uppercase tracking-wide ${style.fg}`}
                   >
@@ -70,17 +73,10 @@ export function Education() {
                   )}
                 </div>
               </RevealItem>
-              {i < educationTimeline.length - 1 && (
-                <CaretUp
-                  size={16}
-                  weight="bold"
-                  className="my-2 shrink-0 text-ink-dim/50"
-                />
-              )}
-            </div>
-          );
-        })}
-      </RevealStagger>
+            );
+          })}
+        </RevealStagger>
+      </div>
 
       <Reveal delay={0.1} className="mt-12 border-t border-line pt-8">
         <div className="flex items-center gap-2.5">

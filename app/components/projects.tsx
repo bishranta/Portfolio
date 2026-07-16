@@ -89,9 +89,10 @@ export function Projects() {
 
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-16">
-      <Reveal>
+      <Reveal className="flex flex-col items-center text-center">
+        <span className="mb-4 block h-1.5 w-9 rounded-full bg-mustard" />
         <h2 className="max-w-[24ch] text-3xl font-semibold tracking-tight md:text-4xl">
-          A handful of things I have shipped.
+          Projects That I've Built
         </h2>
       </Reveal>
 
