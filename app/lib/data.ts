@@ -10,10 +10,13 @@ export const profile = {
   linkedinHandle: "linkedin.com/in/bishrantaregmi",
   instagram: "https://www.instagram.com/bishranta_/",
   instagramHandle: "instagram.com/bishranta_",
+  facebook: "https://www.facebook.com/bishranta.regmi/",
+  facebookHandle: "facebook.com/bishranta.regmi",
   gmailColor: "#EA4335",
   githubColor: "#181717",
   linkedinColor: "#0A66C2",
   instagramColor: "#E4405F",
+  facebookColor: "#1877F2",
 };
 
 export const skillGroups = [
