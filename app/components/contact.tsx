@@ -22,9 +22,10 @@ export function Contact() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("pending");
 
-    const formData = new FormData(e.currentTarget);
+    const formData = new FormData(form);
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "New message from portfolio site");
 
@@ -37,7 +38,7 @@ export function Contact() {
       const result = await res.json();
       if (res.ok && result.success) {
         setStatus("success");
-        e.currentTarget.reset();
+        form.reset();
       } else {
         console.error("Web3Forms error response:", result);
         setStatus("error");
