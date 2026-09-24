@@ -16,9 +16,9 @@ const marksByRole: Record<string, Mark> = {
 };
 
 const marksByOrg: Record<string, Mark> = {
-  "ICT Foundation": { type: "logo", src: "/logos/ictfoundation.ico" },
+  "ICT Foundation": { type: "logo", src: "/logos/ictfoundation.png" },
   "Self-employed": { type: "icon", Icon: Briefcase, fg: "text-teal" },
-  "LOFA, Freelance": { type: "icon", Icon: PenNib, fg: "text-coral" },
+  "Technova, Freelance": { type: "icon", Icon: PenNib, fg: "text-coral" },
 };
 
 const fallback: Mark = { type: "icon", Icon: Briefcase, fg: "text-mustard" };

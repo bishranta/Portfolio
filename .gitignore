@@ -50,3 +50,5 @@ next-env.d.ts
 # planning docs, not part of the site
 /*.md
 /Bishranta_Resume.pdf
+
+.superpowers/
