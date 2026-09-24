@@ -1,7 +1,7 @@
 import { Reveal, RevealItem, RevealStagger } from "./reveal";
 
 const highlights = [
-  { value: "4+", label: "Live sites shipped", bg: "bg-teal/20", fg: "text-teal" },
+  { value: "7+", label: "Live sites shipped", bg: "bg-teal/20", fg: "text-teal" },
   { value: "2", label: "AI/ML projects", bg: "bg-teal/20", fg: "text-teal" },
   { value: "2026", label: "Freshly graduated", bg: "bg-coral/20", fg: "text-coral" },
   { value: "2019", label: "Designing since", bg: "bg-mustard/20", fg: "text-mustard" },
